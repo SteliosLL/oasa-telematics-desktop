@@ -1,0 +1,36 @@
+{
+  "name": "oasa-telematics-wrapper",
+  "version": "1.0.0",
+  "description": "OASA Telematics Desktop App",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win"
+  },
+  "build": {
+    "appId": "com.oasa.telematics.wrapper",
+    "productName": "OASA-Telematics",
+    "asar": true,
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "renderer-inject.js",
+      "icon.ico"
+    ],
+    "win": {
+      "target": "portable",
+      "icon": "icon.ico"
+    },
+    "portable": {
+      "artifactName": "OASA-Telematics.exe",
+      "useZip": false
+    }
+  },
+  "devDependencies": {
+	"electron": "^28.0.0",
+    "electron-builder": "^26.15.3"
+  }
+}
