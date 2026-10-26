@@ -1,7 +1,7 @@
 (function () {
   const CONTAINER_ID = 'oasa-fav-container';
 
-  // Strictly use IPC storage via preload.js — NO LocalStorage fallbacks
+  // Strictly use IPC storage via preload.js
   const getFavorites = async () => {
     try {
       if (window.oasaAPI && typeof window.oasaAPI.getFavorites === 'function') {
